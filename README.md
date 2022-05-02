@@ -85,7 +85,7 @@ The following .json files are used also as input for unit testing:
    - Once we already have the strike data from input (lightning.json), the time complexity for looking up / matching the data against the source is **O(n)** where **n** is the size of our source (assets.json)
    - For the time complexity of looking up **ALL** lightning JSON object in lightning.json against assets.json, the time complexity is: O(n) + O(m) = **O(n + m)** where **n** is the size of our input (lightning.json) and **m** is the size of our source (assets.json)
 - **If we put this code into production, but found it too slow, or it needed to scale to many more users or more frequent strikes, what are the first things you would think of to speed it up?**
-  - In terms of purpose, we're using the assets.json like a database. We basically use it for data lookup purposes and we're basically loading this source or "database" every time we run the program. I don't think this is a good practice once the data gets bigger. The first thing I thought of is to use an actual database perhaps a NoSQL db (redis, aws dynamodb, etc.)
+  - In terms of purpose, we're using the assets.json like a database. We basically use it for data lookup purposes and we're loading this source /"database" every time we run the program. I don't think this is a good practice specially once the data gets bigger. The first thing I thought of is to use an actual database perhaps a NoSQL db (redis, aws dynamodb, etc.)
   - Also, since we're processing JSON object, fetching data through web API endpoint could also be a good approach.
  
 
