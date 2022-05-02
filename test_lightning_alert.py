@@ -12,10 +12,10 @@ class TestLightningAlert(unittest.TestCase):
                           "assetOwner": "00001"},
                          {"assetName": "Joey Tribianni",
                          "quadKey": "02222222222", "assetOwner": "00002"}]
-        self.assertEquals(load_assets('asset_test1.json'), expected_list)
+        self.assertEquals(load_assets('assets_test1.json'), expected_list)
 
     def test_load_assets_count(self):
-        self.assertEquals(len(load_assets('asset_test1.json')), 2)
+        self.assertEquals(len(load_assets('assets_test1.json')), 2)
 
     def test_get_quadkey_count(self):
         self.assertEquals(len(get_quadkeys('lightning_test1.json')), 5)
