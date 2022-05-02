@@ -116,5 +116,6 @@ def main(args):
     # Look for requested_quadkeys in asset_data - O(m)
     asset_lookup(asset_data, requested_quadkeys)
 
+
 if __name__ == "__main__":
     main(sys.argv)
